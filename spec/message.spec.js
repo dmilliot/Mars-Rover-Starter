@@ -9,4 +9,15 @@ describe("Message class", function() {
     it("throws error if a name is NOT passed into the constructor as the first parameter.", function() {
         expect( function() {new Message();}).toThrow(new Error("Message name required."));
         });
+
+    it('should set name property in a new message object', function() {
+        let testObject = new Message("Greetings");
+        expect(testObject.name).toBe("Greetings");
+        })
+
+    it('should contain a command array passed in as 2nd argument.', function() {
+        let commands = ['Move', 'Stop', 'Flip'];
+        let testObject = new Message("Greetings", commands);
+        expect(testObject.commands).toBe(commands);
+    })
 });

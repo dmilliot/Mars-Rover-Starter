@@ -1,7 +1,7 @@
 class Message {
    constructor(name, commands) {
       this.name = name;
-         if (Message.name === undefined) {
+         if (this.name === undefined) {
             throw Error("Message name required.");
    }
       this.commands = commands;
